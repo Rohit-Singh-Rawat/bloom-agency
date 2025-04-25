@@ -29,7 +29,7 @@ const ParticlesComponent = () => {
 	}, []);
 
 	return (
-		<div className='absolute top-0 left-0 w-full h-full bg-radial-[at_top] from-black via-black via-50% to-blue-700 '>
+		<div className='absolute top-0 left-0 w-full h-full bg-radial-[at_top] from-[#4A90E2] via-[#4A90E2] via-50% to-[#7ED6DF] '>
 			{init && (
 				<Particles
 					id='tsparticles'
@@ -40,7 +40,7 @@ const ParticlesComponent = () => {
 						width: '100%',
 						height: '100%',
 					}}
-					className='absolute top-0 left-0 w-full h-full bg-radial-[at_top] from-black via-black via-50% to-blue-700 '
+					className='absolute top-0 left-0 w-full h-full bg-radial-[at_top] from-[#4A90E2] via-[#4A90E2] via-50% to-[#7ED6DF] '
 					particlesLoaded={particlesLoaded}
 					options={{
 						background: {

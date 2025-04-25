@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { User } from 'lucide-react';
+import { ArrowRight, User } from 'lucide-react';
 
 const Founder = () => {
 	return (
@@ -18,15 +18,13 @@ const Founder = () => {
 					<h2 className='text-2xl sm:text-3xl md:text-4xl font-medium mb-3 md:mb-4'>
 						Meet the Founder
 					</h2>
-					<p className='text-lg sm:text-xl text-blue-600 font-medium'>
-						Vision. Execution. Results.
-					</p>
+				
 				</motion.div>
 
 				<div className='grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 items-center'>
 					{/* Founder Image - Column 1 (takes 2 column spaces on large screens) */}
 					<motion.div
-						className='lg:col-span-2 flex justify-center mb-8 lg:mb-0'
+						className='lg:col-span-2 flex justify-center items-start mb-8 lg:mb-0'
 						initial={{ opacity: 0, x: -20 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						viewport={{ once: true }}
@@ -51,11 +49,9 @@ const Founder = () => {
 						viewport={{ once: true }}
 						transition={{ duration: 0.6, delay: 0.2 }}
 					>
-						<h3 className='text-xl sm:text-2xl font-medium mb-3 md:mb-4 text-center lg:text-left'>
-							Harshdeep
-						</h3>
+						
 						<p className='text-neutral-700 mb-3 md:mb-4 text-sm sm:text-base'>
-							I&apos;m Harshdeep, the founder of LinkVerse Labs — a next-gen development agency
+							The founder of LinkVerse Labs — a next-gen development agency
 							built to transform ideas into powerful digital products.
 						</p>
 						<p className='text-neutral-700 mb-3 md:mb-4 text-sm sm:text-base'>
@@ -77,12 +73,12 @@ const Founder = () => {
 						<div className='flex justify-center lg:justify-start'>
 							<Link href='/contact'>
 								<motion.button
-									className='px-5 py-2.5 sm:px-6 sm:py-3 bg-blue-700 text-white rounded-md font-medium transition-all'
-									whileHover={{ scale: 1.02, backgroundColor: '#1d4ed8' }}
+									className='px-5 py-2.5 sm:px-6 sm:py-3 bg-black text-white rounded-md font-medium transition-all flex gap-2 items-center'
+									whileHover={{ scale: 1.02,  }}
 									whileTap={{ scale: 0.98 }}
 									transition={{ duration: 0.2 }}
 								>
-									Get in Touch
+									Get in Touch <ArrowRight className='animate-horizontal-bounce size-5'/>
 								</motion.button>
 							</Link>
 						</div>

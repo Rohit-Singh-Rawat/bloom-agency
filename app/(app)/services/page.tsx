@@ -122,7 +122,7 @@ export default function ServicesPage() {
 	];
 
 	return (
-		<div className='container mx-auto px-4 py-16 max-w-screen-xl'>
+		<div className='container mx-auto px-4 py-16 pt-24 max-w-screen-xl'>
 			<div className='text-center mb-16'>
 				<h1 className='text-4xl font-medium mb-4'>Our Services</h1>
 				<p className='text-xl text-muted-foreground max-w-3xl mx-auto'>
@@ -163,10 +163,10 @@ export default function ServicesPage() {
 				<Button
 					variant='solid'
 					size='lg'
-					className='group'
+					className='group bg-black text-white hover:bg-black/90 transform transition-all duration-300 hover:scale-105 animate-pulse hover:animate-none'
 				>
 					Schedule a Consultation
-					<ArrowRight className='ml-2 w-4 h-4 inline-block group-hover:translate-x-1 transition-transform' />
+					<ArrowRight className='ml-2 w-4 h-4 inline-block group-hover:translate-x-1 transition-transform ' />
 				</Button>
 			</div>
 		</div>

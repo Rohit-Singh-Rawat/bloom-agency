@@ -21,7 +21,7 @@ const Hero = () => {
 			<div className='container px-4 sm:px-6 z-50 w-full'>
 				<div className='mx-auto text-center max-w-4xl'>
 					<motion.h1
-						className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 text-neutral-100 text-shadow-lg'
+						className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 text-blue-50 text-shadow-lg'
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
@@ -30,7 +30,7 @@ const Hero = () => {
 					</motion.h1>
 
 					<motion.p
-						className='text-base sm:text-lg md:text-xl text-neutral-600 mx-auto mb-6'
+						className='text-base sm:text-lg text-shadow-2xs md:text-2xl text-[#130e4f] mx-auto mb-6'
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
@@ -55,7 +55,7 @@ const Hero = () => {
 						</motion.a>
 
 						<motion.button
-							className='w-full sm:w-auto px-6 py-3 border border-foreground rounded-md font-medium bg-background'
+							className='w-full sm:w-auto px-6 py-3 border border-blue-900  text-blue-900 rounded-md font-medium bg-blue-100 '
 							whileHover={{ scale: 1.05 }}
 							transition={{ type: 'spring', stiffness: 400 }}
 						>

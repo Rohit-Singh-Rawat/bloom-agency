@@ -11,7 +11,7 @@ interface FeatureProps {
 
 const Feature = ({ icon, title, description }: FeatureProps) => {
 	return (
-		<div className='space-y-2  shadow-inner hover:bg-accent transition-all duration-300 group bg-white'>
+		<div className='space-y-2  shadow-md hover:bg-accent hover:border-blue-500 transition-all duration-300 group bg-white rounded-2xl border border-blue-200'>
 			<div className='flex items-center gap-2'>
 				<div className='group-hover:scale-120 transition-all duration-300'>{icon}</div>
 				<h3 className='text-sm font-medium'>{title}</h3>
@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
 	];
 
 	return (
-		<section className='py-12 md:py-20'>
+		<section className='py-12 md:py-20 bg-neutral-200 border'>
 			<div className='mx-auto max-w-5xl space-y-8 px-6 md:space-y-16'>
 				<div className='relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12'>
 					<h2 className='text-balance text-4xl font-medium lg:text-5xl'>Why Choose Us?</h2>
@@ -67,7 +67,7 @@ export default function WhyChooseUs() {
 					</p>
 				</div>
 
-				<div className='relative mx-auto grid max-w-4xl divide-x divide-y border *:p-12 sm:grid-cols-2 lg:grid-cols-3'>
+				<div className='relative mx-auto grid max-w-4xl divide-x divide-y  *:p-12 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
 					{features.map((feature, index) => (
 						<Feature
 							key={index}

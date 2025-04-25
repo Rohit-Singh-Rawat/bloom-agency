@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import { PulsatingButton } from '../ui/pulsebutton';
 
 interface NavItem {
 	label: string;
@@ -43,7 +44,7 @@ const Navbar = () => {
 	// Determine navbar background color based on page and scroll position
 	const getNavbarBgClass = () => {
 		if (isHomePage && atTop) {
-			return 'bg-black/20 backdrop-blur-sm';
+			return 'bg-white/20 backdrop-blur-sm';
 		}
 		return 'bg-[#F2FFFF] shadow-sm';
 	};
@@ -58,7 +59,7 @@ const Navbar = () => {
 
 	return (
 		<motion.nav
-			className={`w-full py-4 px-4 sm:px-6 flex items-center justify-between fixed top-0 left-0 right-0 z-[100] mx-auto transition-colors duration-300 ${getNavbarBgClass()}`}
+			className={`w-full py-3 px-4 sm:px-6 flex items-center justify-between fixed top-0 left-0 right-0 z-[100] mx-auto transition-colors duration-300 ${getNavbarBgClass()}`}
 			variants={{
 				visible: { y: 0 },
 				hidden: { y: '-100%' },
@@ -66,7 +67,7 @@ const Navbar = () => {
 			animate={hidden ? 'hidden' : 'visible'}
 			transition={{ duration: 0.35, ease: 'easeInOut' }}
 		>
-			<div className='container mx-auto flex items-center justify-between max-w-screen-xl'>
+			<div className='container mx-auto flex items-center justify-between max-w-7xl px-4'>
 				<Link
 					href='/'
 					className={`text-lg sm:text-xl font-medium ${getTextColorClass()}`}
@@ -87,13 +88,8 @@ const Navbar = () => {
 					))}
 				</div>
 				<div>
-					<Link
-						href='/internship'
-						className={`font-medium hidden md:block ${
-							isHomePage && atTop ? 'text-shadow' : ''
-						} ${getTextColorClass()}`}
-					>
-						Internship
+					<Link href='/internship'>
+						<PulsatingButton pulseColor='#F2FFFF' className='bg-black/80'>Internship</PulsatingButton>
 					</Link>
 				</div>
 				{/* Mobile Navigation Toggle */}
@@ -148,7 +144,7 @@ const Navbar = () => {
 							))}
 							<Link
 								href='/internship'
-								className='bg-primary text-primary-foreground px-4 py-3 rounded-md hover:bg-primary/90 transition-colors font-medium text-center mt-2'
+								className='bg-white text-primary-foreground px-4 py-3 rounded-md hover:bg-primary/90 transition-colors font-medium text-center mt-2 '
 								onClick={() => setIsOpen(false)}
 							>
 								Internship

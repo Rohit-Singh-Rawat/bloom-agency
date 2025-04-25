@@ -59,7 +59,7 @@ function InternshipPrograms() {
 	];
 
 	return (
-		<div className='w-full py-20'>
+		<section id='programs' className='w-full py-20'>
 			<div className='container mx-auto'>
 				<div className='flex text-center justify-center items-center gap-4 flex-col'>
 					<div className='px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary'>
@@ -77,8 +77,8 @@ function InternshipPrograms() {
 						{programs.map((program, index) => (
 							<div
 								key={index}
-								className={`w-full rounded-md bg-white border p-6 ${
-									program.isPopular ? 'shadow-2xl border-primary' : 'border-border'
+								className={`w-full shadow-xl shadow-blue-200/90 rounded-md bg-white border hover:scale-110 transition-all group duration-300 p-6 ${
+									program.isPopular ? 'shadow-2xl border-blue-200' : 'border-border '
 								}`}
 							>
 								<div className='pb-6'>
@@ -114,11 +114,7 @@ function InternshipPrograms() {
 										</div>
 										<Link href='/apply'>
 											<button
-												className={`w-full py-2 px-4 rounded-md ${
-													program.isPopular
-														? 'bg-primary text-primary-foreground hover:bg-primary/90'
-														: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground'
-												}`}
+												className={`w-full py-2 px-4 rounded-md					border border-input bg-background hover:bg-accent hover:text-accent-foreground  group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300`}
 											>
 												Apply Now
 											</button>
@@ -131,7 +127,7 @@ function InternshipPrograms() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 

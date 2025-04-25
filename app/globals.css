@@ -43,13 +43,33 @@
 	--radius-xl: calc(var(--radius) + 4px);
 	--animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards)
 		linear infinite;
+	--animate-horizontal-bounce: horizontal-bounce 1s ease-in-out infinite;
+
+	@keyframes horizontal-bounce {
+		0%, 100% {
+			transform: translateX(0);
+		}
+		50% {
+			transform: translateX(10px);
+		}
+	}
 
 	@keyframes scroll {
 		to {
 			transform: translate(calc(-50% - 0.5rem));
 		}
 	}
-
+ --animate-pulse: pulse var(--duration) ease-out infinite;
+ 
+  @keyframes pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 var(--pulse-color);
+    }
+    50% {
+      box-shadow: 0 0 0 5.5px var(--pulse-color);
+    }
+  }
 	--animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
 
 	--animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear
@@ -76,7 +96,7 @@
 
 :root {
 	--radius: 0.625rem;
-	--background: oklch(0.995 0.02 240);
+	--background: #fafafa;
 	--foreground: oklch(0.145 0 0);
 	--card: oklch(1 0 0);
 	--card-foreground: oklch(0.145 0 0);
@@ -165,3 +185,4 @@
 .group-hover\:animate-shine:hover {
 	animation: shine 1.5s ease-in-out;
 }
+

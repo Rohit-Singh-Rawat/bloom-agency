@@ -10,8 +10,8 @@ const CareersHero = () => {
 				className='absolute bg-transparent'
 				direction='diagonal'
 				speed={0.5}
-				backgroundColor='#FFFDFA'
-				maskColor='#FFFDFA'
+				backgroundColor='#fafafa'
+				maskColor='#fafafa'
 				squareSize={40}
 				borderColor='#ededed'
 				hoverFillColor='#e6f0ff'

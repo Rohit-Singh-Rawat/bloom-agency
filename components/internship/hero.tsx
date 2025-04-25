@@ -11,8 +11,8 @@ const InternshipHero = () => {
 				className='absolute bg-transparent'
 				direction='diagonal'
 				speed={0.5}
-				backgroundColor='#F2FFFF'
-				maskColor='#F2FFFF'
+				backgroundColor='#fafafa'
+				maskColor='#fafafa'
 				squareSize={40}
 				borderColor='#ededed'
 				hoverFillColor='#e6f0ff'
@@ -57,9 +57,9 @@ const InternshipHero = () => {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.6, delay: 0.5 }}
 						>
-							<button className='bg-primary text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-primary/90 transition-colors'>
+							<a href='/internship#programs' className='bg-primary text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-primary/90 transition-colors'>
 								Apply Now
-							</button>
+							</a>
 						</motion.div>
 					</div>
 					
