@@ -48,11 +48,12 @@ const services = [
 		icon: 'https://images.unsplash.com/photo-1554306274-f23873d9a26c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 		link: '/services/maintenance-support',
 	},
+	
 ];
 
 const Services = () => {
 	return (
-		<section className='py-12 sm:py-16 md:py-20 bg-background'>
+		<section className='py-12 sm:py-16 md:py-20 bg-background z-50'>
 			<div className='container mx-auto px-4 sm:px-6'>
 				<motion.div
 					className='text-center mb-10 sm:mb-12 md:mb-16'

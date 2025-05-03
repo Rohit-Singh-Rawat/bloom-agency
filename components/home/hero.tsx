@@ -21,7 +21,7 @@ const Hero = () => {
 			<div className='container px-4 sm:px-6 z-50 w-full'>
 				<div className='mx-auto text-center max-w-4xl'>
 					<motion.h1
-						className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 text-blue-50 text-shadow-lg'
+						className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold mb-4 text-blue-50 text-shadow-lg'
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
@@ -48,7 +48,7 @@ const Hero = () => {
 						<motion.a href='/contact'>
 							<Button
 								variant='default'
-								className='w-full sm:w-auto px-6 py-3 bg-foreground text-background rounded-md font-medium hover:bg-foreground/80 transition-all duration-200'
+								className='w-full sm:w-auto px-6 py-3 bg-foreground text-background rounded-md font-medium hover:bg-foreground/80 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out'
 							>
 								Contact Us
 							</Button>
@@ -63,18 +63,7 @@ const Hero = () => {
 						</motion.button>
 					</motion.div>
 
-					<motion.div
-						className='mt-16 sm:mt-24 flex items-center justify-center'
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 0.4 }}
-						transition={{ duration: 0.8, delay: 0.6 }}
-					>
-						<div className='w-10 sm:w-16 h-[1px] bg-neutral-400 mr-4'></div>
-						<p className='text-xs sm:text-sm uppercase tracking-widest text-neutral-500'>
-							Scroll to discover
-						</p>
-						<div className='w-10 sm:w-16 h-[1px] bg-neutral-400 ml-4'></div>
-					</motion.div>
+					
 				</div>
 			</div>
 		</section>

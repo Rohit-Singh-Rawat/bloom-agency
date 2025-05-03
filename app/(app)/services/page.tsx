@@ -119,6 +119,12 @@ export default function ServicesPage() {
 			title: 'Security Best Practices',
 			description: 'We follow industry standards to ensure your data and systems are protected.',
 		},
+		{
+			emoji: '🚀',
+			title: 'Rapid Prototyping',
+			description:
+				'We quickly transform concepts into interactive prototypes to validate ideas early in the process.',
+		},
 	];
 
 	return (

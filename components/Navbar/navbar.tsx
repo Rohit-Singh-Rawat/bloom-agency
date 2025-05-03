@@ -72,7 +72,7 @@ const Navbar = () => {
 					href='/'
 					className={`text-lg sm:text-xl font-medium ${getTextColorClass()}`}
 				>
-					LinkVerse Labs
+					LinkVerse
 				</Link>
 
 				{/* Desktop Navigation */}
@@ -89,7 +89,12 @@ const Navbar = () => {
 				</div>
 				<div>
 					<Link href='/internship'>
-						<PulsatingButton pulseColor='#F2FFFF' className='bg-black/80'>Internship</PulsatingButton>
+						<PulsatingButton
+							pulseColor={hidden ? ' #F2FFFF' : 'gray'}
+							className='bg-black/80 '
+						>
+							Internship
+						</PulsatingButton>
 					</Link>
 				</div>
 				{/* Mobile Navigation Toggle */}

@@ -8,6 +8,7 @@ import {
 	IconCircle4,
 	IconCircle5,
 	IconCircle6,
+	IconRocket,
 } from '@tabler/icons-react';
 import { IconCheck, IconBrain, IconHandStop, IconChartBar, IconTools } from '@tabler/icons-react';
 
@@ -22,7 +23,7 @@ const ApproachStep = ({
 }) => {
 	return (
 		<motion.div
-			className='flex flex-col'
+			className='flex flex-col hover:scale-105 transition-all duration-200'
 			initial={{ opacity: 0, y: 20 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true }}
@@ -137,7 +138,7 @@ const Approach = () => {
 			title: 'Ongoing Support',
 			description:
 				'After launch, we offer continuous monitoring, updates, and feature enhancements to keep your product running at its best.',
-		},
+		}
 	];
 
 	const differentiators = [
@@ -193,6 +194,17 @@ const Approach = () => {
 			description:
 				"Whether you're launching an MVP or expanding an enterprise platform, we build for long-term growth.",
 		},
+		{
+			icon: (
+				<IconRocket
+					size={20}
+					className='sm:size-[24px]'
+				/>
+			),
+			title: 'Rapid Prototyping',
+			description: 'We quickly transform concepts into interactive prototypes to validate ideas early in the process.',
+		},
+		
 	];
 
 	return (
